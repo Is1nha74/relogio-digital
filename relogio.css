@@ -1,0 +1,79 @@
+@font-face {
+    font-family: my_font;
+    src: url("fonts/Adventure.otf");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: my_font;
+}
+
+body{
+    background: url(images/fundo-relogio.png) center no-repeat;
+    background-size: cover;
+    height: 100vh;
+
+    display: grid;
+    place-items: center;
+}
+
+.relogio{
+    background-color: #1a1a1a1a;
+    width: 80%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    color:  #00ff00;
+    padding: 3%;
+    box-shadow: 2px 2px;
+    backdrop-filter: blur (9px);
+    border-radius: 12px;
+}
+
+.relogio div{
+    border: 2px solid yellow;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 1rem;
+    width: 30%;
+    background-color: rgba(153, 205, 50, 0.377);
+}
+
+.relogio div span{
+    font-size: 7rem;
+}
+
+.relogio div span.tempo {
+    font-size: 1.3rem;
+    color:green;
+}
+
+#date{
+    font-size: 2rem;
+    background-color: rgba(255, 255, 255, 0.842);
+    color: #6BC030;
+    font-weight: 20px;
+    text-shadow: 2px 2px black; 
+    font-family: my_font;
+}
+
+@media (max-width: 500px) {
+    .relogio{
+        flex-direction: column;
+        width: 80%;
+       
+    }
+
+    .relogio div{
+        width: 50%;
+        margin-bottom: 2rem;
+       
+    }
+}
+
+
